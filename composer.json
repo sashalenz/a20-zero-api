@@ -1,23 +1,26 @@
 {
-    "name": ":vendor_name/:package_name",
-    "description": ":package_description",
+    "name": "sashalenz/a20-zero-api",
+    "description": "a20-zero-api",
     "keywords": [
-        ":vendor_name",
-        ":package_name"
+        "sashalenz",
+        "a20-zero-api"
     ],
-    "homepage": "https://github.com/:vendor_name/:package_name",
+    "homepage": "https://github.com/sashalenz/a20-zero-api",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
+            "name": "Oleksandr Petrovskyi",
+            "email": "sashalenz@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.0",
-        "spatie/laravel-package-tools": "^1.1",
-        "illuminate/contracts": "^8.0"
+        "php": "^7.4|^8.0",
+        "moneyphp/money": "^8.0",
+        "illuminate/contracts": "^8.0",
+        "illuminate/support": "^8.0",
+        "spatie/data-transfer-object": "^2.8",
+        "spatie/laravel-package-tools": "^1.1"
     },
     "require-dev": {
         "orchestra/testbench": "^6.0",
@@ -27,13 +30,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src",
-            "Spatie\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Sashalenz\\Zero\\": "src",
+            "Sashalenz\\Zero\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "Sashalenz\\Zero\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -47,10 +50,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\Skeleton\\SkeletonServiceProvider"
+                "Sashalenz\\Zero\\ZeroServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "Spatie\\Skeleton\\SkeletonFacade"
+                "Zero": "Sashalenz\\Zero\\ZeroFacade"
             }
         }
     },

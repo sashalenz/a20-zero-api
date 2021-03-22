@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Skeleton\Tests;
+namespace Sashalenz\Zero\Tests;
 
 class ExampleTest extends TestCase
 {
