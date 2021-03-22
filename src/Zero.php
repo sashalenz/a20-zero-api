@@ -33,5 +33,4 @@ class Zero
 
         return PartDataTransferObject::fromArray($response);
     }
-
 }

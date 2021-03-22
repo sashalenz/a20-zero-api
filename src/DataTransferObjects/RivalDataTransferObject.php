@@ -24,7 +24,7 @@ class RivalDataTransferObject extends DataTransferObject
             'price' => new Money($array['price']['amount'], new Currency($array['price']['currency'])),
             'delivery' => $array['delivery'],
             'isUsed' => (bool) $array['isUsed'],
-            'isWholesale' => (bool) $array['isWholesale']
+            'isWholesale' => (bool) $array['isWholesale'],
         ]);
     }
 
