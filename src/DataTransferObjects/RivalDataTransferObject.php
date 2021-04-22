@@ -26,7 +26,7 @@ class RivalDataTransferObject extends DataTransferObject
             'city' => $array['city'],
             'delivery' => $array['delivery'],
             'isUsed' => (bool) $array['isUsed'],
-            'isWholesale' => (bool) $array['isWholesale']
+            'isWholesale' => (bool) $array['isWholesale'],
         ]);
     }
 

@@ -21,8 +21,7 @@ class PartDataTransferObject extends DataTransferObject
             'brand' => BrandDataTransferObject::fromArray($array['brand']),
             'name' => $array['name'],
             'parsedAt' => isset($array['parsedAt']) ? Carbon::createFromFormat('Y-m-d H:i', $array['parsedAt']) : null,
-            'rivals' => RivalDataTransferObject::arrayFromArray($array['rivals'])
+            'rivals' => RivalDataTransferObject::arrayFromArray($array['rivals']),
         ]);
     }
-
 }
