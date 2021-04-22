@@ -11,6 +11,6 @@ class ZeroFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'a20-zero-api';
+        return 'zero';
     }
 }

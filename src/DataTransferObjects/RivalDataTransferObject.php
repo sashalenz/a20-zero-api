@@ -10,6 +10,7 @@ use Spatie\DataTransferObject\DataTransferObject;
 class RivalDataTransferObject extends DataTransferObject
 {
     public string $name;
+    public BrandDataTransferObject $brand;
     public string $city;
     public Money $price;
     public ?int $delivery = null;
@@ -20,8 +21,9 @@ class RivalDataTransferObject extends DataTransferObject
     {
         return new self([
             'name' => $array['name'],
-            'city' => $array['city'],
+            'brand' => BrandDataTransferObject::fromArray($array['brand']),
             'price' => new Money($array['price']['amount'], new Currency($array['price']['currency'])),
+            'city' => $array['city'],
             'delivery' => $array['delivery'],
             'isUsed' => (bool) $array['isUsed'],
             'isWholesale' => (bool) $array['isWholesale']

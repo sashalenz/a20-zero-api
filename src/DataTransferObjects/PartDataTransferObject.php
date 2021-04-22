@@ -9,7 +9,7 @@ use Spatie\DataTransferObject\DataTransferObject;
 class PartDataTransferObject extends DataTransferObject
 {
     public string $number;
-    public string $brand;
+    public BrandDataTransferObject $brand;
     public string $name;
     public Collection $rivals;
     public ?Carbon $parsedAt = null;
@@ -18,7 +18,7 @@ class PartDataTransferObject extends DataTransferObject
     {
         return new self([
             'number' => $array['number'],
-            'brand' => $array['brand'],
+            'brand' => BrandDataTransferObject::fromArray($array['brand']),
             'name' => $array['name'],
             'parsedAt' => isset($array['parsedAt']) ? Carbon::createFromFormat('Y-m-d H:i', $array['parsedAt']) : null,
             'rivals' => RivalDataTransferObject::arrayFromArray($array['rivals'])
