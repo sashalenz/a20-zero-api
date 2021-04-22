@@ -14,5 +14,4 @@ class BrandDataTransferObject extends DataTransferObject
             'name' => $array['name'],
         ]);
     }
-
 }

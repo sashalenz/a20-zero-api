@@ -15,7 +15,7 @@ class Part extends BaseModel
     public function getPrices(string $search):? PartDataTransferObject
     {
         $this->validate([
-            'search' => ['required', 'string', 'max:191']
+            'search' => ['required', 'string', 'max:191'],
         ]);
 
         $response = $this

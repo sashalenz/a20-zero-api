@@ -74,5 +74,4 @@ abstract class BaseModel
 
         return $request->make();
     }
-
 }

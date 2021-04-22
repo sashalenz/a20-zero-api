@@ -44,7 +44,7 @@ final class Request
                 ->baseUrl($this->url)
                 ->asJson()
                 ->withHeaders([
-                    'Authorization: Bearer ' . $this->token
+                    'Authorization: Bearer ' . $this->token,
                 ])
                 ->get(
                     $this->method
@@ -59,10 +59,10 @@ final class Request
     public function cache(int $seconds = -1): Collection
     {
         if ($seconds === -1) {
-            return Cache::rememberForever($this->getCacheKey(), fn() => $this->make());
+            return Cache::rememberForever($this->getCacheKey(), fn () => $this->make());
         }
 
-        return Cache::remember($this->getCacheKey(), $seconds, fn() => $this->make());
+        return Cache::remember($this->getCacheKey(), $seconds, fn () => $this->make());
     }
 
     private function getCacheKey(): string
